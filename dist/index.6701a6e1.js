@@ -618,9 +618,9 @@ module.exports = require('./cjs/react-refresh-runtime.development.js');
     exports.setSignature = setSignature;
 })();
 
-},{}],"jdWdI":[function(require,module,exports) {
+},{}],"kXjKy":[function(require,module,exports) {
 var HMR_HOST = null;
-var HMR_PORT = 61430;
+var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "69f74e7f31319ffd";
 module.bundle.HMR_BUNDLE_ID = "2dba8b266701a6e1";
@@ -22888,6 +22888,6 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"g7Ona"}]},["bD41N","jdWdI","dLPEP"], "dLPEP", "parcelRequireaec4")
+},{"react-refresh/runtime":"g7Ona"}]},["bD41N","kXjKy","dLPEP"], "dLPEP", "parcelRequireaec4")
 
 //# sourceMappingURL=index.6701a6e1.js.map
