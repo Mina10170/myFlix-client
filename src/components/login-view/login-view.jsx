@@ -1,60 +1,106 @@
-import React from 'react';
-import axios from 'axios';
-import PropTypes from "prop-types";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import { Link } from 'react-router-dom';
 import React, { useState } from "react";
-import { Form, Button, Row, Card, Container } from 'react-bootstrap';
+import PropTypes from "prop-types";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import {
+  Form,
+  Button,
+  Card,
+  CardGroup,
+  Container,
+  Col,
+  Row,
+} from "react-bootstrap";
 
-import './login-view.scss';
+import "./login-view.scss";
 
 export function LoginView(props) {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(username, password);
-        /* Send a request to the server for authentication */
-        axios.post('https://movieapi-morkos.herokuapp.com/login', {
-            Username: username,
-            Password: password
-        })
-            .then(response => {
-                const data = response.data;
-                props.onLoggedIn(data);
-            })
-            .catch(e => {
-                console.log('no such user')
-            });
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(username, password);
+    /* Send a request to the server for authentication */
+    axios
+      .post("https://movieapi-morkos.herokuapp.com/login", {
+        Username: username,
+        Password: password,
+      })
+      .then((response) => {
+        const data = response.data;
+        console.log(data);
+        props.onLoggedIn(data);
+      })
+      .catch((e) => {
+        console.log("User does not exist");
+      });
+  };
 
-    return (
-        <Form className="form" align="center">
-            <h2>Log In</h2>
-            <br />
-            <Form.Group controlId="formUsername">
-                <Form.Control type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder="Username"></Form.Control>
-            </Form.Group>
-            <br />
-            <Form.Group controlId="formPassword">
-                <Form.Control type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password"></Form.Control>
-            </Form.Group>
-            <br></br>
-            <div className="form-button">
-                <Button variant="outline-primary" type="submit" onClick={handleSubmit}>Log in</Button>
-                <br />
-                <br />
-                <br />
-            </div>
-        </Form >
-    );
+  return (
+    <>
+      <div className="login-view">
+        <h1 className="intro">Welcome, to My Flix!</h1>
+        <Container>
+          <Row>
+            <Col>
+              <CardGroup>
+                <Card>
+                  <Card.Body>
+                    <Card.Title>Log In</Card.Title>
+                    <Form>
+                      <Form.Group controlId="formUsername">
+                        <span className="subtitle">USERNAME:</span>
+                        <br />
+                        <input
+                          type="text"
+                          placeholder="Enter username"
+                          value={username}
+                          onChange={(e) => setUsername(e.target.value)}
+                        />
+                      </Form.Group>
+
+                      <Form.Group controlId="formpassword">
+                        <span className="subtitle">PASSWORD</span>
+                        <br />
+                        <input
+                          type="password"
+                          placeholder="Enter password"
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                        />
+                      </Form.Group>
+                      <Button
+                        variant="primary"
+                        type="submit"
+                        onClick={handleSubmit}
+                        style={{ marginTop: "20px" }}
+                      >
+                        Login
+                      </Button>
+                      <p>New to Topimdbmovies? Please sign up!</p>
+                      <Link to="/register">
+                        <Button
+                          style={{ marginTop: "10px" }}
+                          variant="primary"
+                          type="button"
+                        >
+                          {" "}
+                          Create Account
+                        </Button>
+                      </Link>
+                    </Form>
+                  </Card.Body>
+                </Card>
+              </CardGroup>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </>
+  );
 }
 
 LoginView.propTypes = {
-    user: PropTypes.shape({
-        username: PropTypes.string.isRequired,
-        password: PropTypes.string.isRequired,
-    }),
-    onLoggedIn: PropTypes.func.isRequired,
+  onLoggedIn: PropTypes.func.isRequired,
 };

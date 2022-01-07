@@ -1,5 +1,36 @@
-$color: steelblue;
+body {
+  font-size: larger;
+  background-image: url(.//img/image_1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.card,
+.card-body {
+  background: #1f1f1f;
+  color: whitesmoke;
+}
 
-.my-flix {
-  color: $color;
+.subtitle,
+p {
+  font-size: 11px;
+
+  color: rgba(177, 177, 177, 0.3);
+}
+
+input {
+  border: none;
+  border-bottom: solid rgb(143, 143, 143) 1px;
+
+  margin-bottom: 30px;
+
+  background: none;
+  color: rgba(255, 255, 255, 0.555);
+
+  height: 35px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
 }

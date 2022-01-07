@@ -1,21 +1,13 @@
-.loginNavbar {
-  background: #162b48;
+p {
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
-html,
-body,
-#loginCard > div {
-  background: #0095c4 !important;
-  height: 100%;
-}
-
-html,
-body,
-#loginContainer > div {
-  background: #0095c4 !important;
-  height: 100%;
-}
-
-body {
-  font-family: "Teko", sans-serif !important;
+.intro {
+  font-weight: 200;
+  text-align: center;
+  padding-top: 50px;
+  color: whitesmoke;
+  letter-spacing: .5px;
 }
