@@ -2,13 +2,15 @@
   "name": "myflix-client",
   "version": "1.0.0",
   "description": "",
-  "default": "src/index.html",
+  "source": "src/index.html",
   "dependencies": {
+    "@parcel/compressor-raw": "^2.2.0",
     "axios": "^0.24.0",
     "js-tokens": "^4.0.0",
     "loose-envify": "^1.4.0",
     "object-assign": "^4.1.1",
     "parcel": "^2.0.0-rc.0",
+    "parcel-bundler": "^1.12.5",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.2",
@@ -20,11 +22,13 @@
     "scheduler": "^0.20.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mina10170/myFlix-client.git"
+    "url": "https://github.com/Mina10170/myFlix-client.git"
   },
   "author": "",
   "license": "ISC",
