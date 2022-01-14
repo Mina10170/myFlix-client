@@ -22,13 +22,12 @@
     "scheduler": "^0.20.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel src/index.html"
+    
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Mina10170/myFlix-client.git"
+    "url": "git+https://github.com/Mina10170/myFlix-client.git"
   },
   "author": "",
   "license": "ISC",

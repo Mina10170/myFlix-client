@@ -11,29 +11,87 @@
 body {
   font-family: "Teko", sans-serif !important;
 }
-.loginNavbar {
-  background: #162b48;
+p {
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
-html,
-body,
-#loginCard > div {
-  background: #0095c4 !important;
-  height: 100%;
+.intro {
+  font-weight: 200;
+  text-align: center;
+  padding-top: 50px;
+  color: whitesmoke;
+  letter-spacing: 0.5px;
 }
 
-html,
-body,
-#loginContainer > div {
-  background: #0095c4 !important;
-  height: 100%;
+.visibility-filter {
+  width: 100%;
 }
 
+
+
+.button {
+  margin-right: 10px;
+}
+
+.fav-poster {
+  width: 20%;
+}
+
+.user-profile {
+  margin-top: 30px;
+}
+
+.card-title {
+  padding: 10px;
+}
+
+.profile-container {
+  padding: 10px;
+}
+
+.form-label {
+  padding-top: 10px;
+}
+
+h4 {
+  padding-left: 10px;
+}
+.navbar {
+  background-color: #121212 !important;
+}
 body {
-  font-family: "Teko", sans-serif !important;
+  font-size: larger;
+  background-image: url(image_1.ff9803c7.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
-.my-flix {
-  color: steelblue;
+.card,
+.card-body {
+  background: #1f1f1f;
+  color: whitesmoke;
+}
+
+.subtitle,
+p {
+  font-size: 11px;
+  color: rgba(177, 177, 177, 0.3);
+}
+
+input {
+  border: none;
+  border-bottom: solid #8f8f8f 1px;
+  margin-bottom: 30px;
+  background: none;
+  color: rgba(255, 255, 255, 0.555);
+  height: 35px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
 }
 /*# sourceMappingURL=index.17d663fa.css.map */

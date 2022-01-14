@@ -40,22 +40,7 @@ class MainView extends React.Component {
     }
   }
 
-  //======================Before Redux=======================
-  // getMovies(token) {
-  //   axios
-  //     .get("https://topimdbmovies.herokuapp.com/movies", {
-  //       headers: { Authorization: `Bearer ${token}` },
-  //     })
-  //     .then((response) => {
-  //       // Assign the result to the state
-  //       this.setState({
-  //         movies: response.data,
-  //       });
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error);
-  //     });
-  // }
+
 
   getMovies(token) {
     axios
